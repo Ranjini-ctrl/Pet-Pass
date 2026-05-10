@@ -1,0 +1,116 @@
+/* ===== CSS Variables ===== */
+:root {
+  --green-light: #e8f5e9;
+  --green-mid: #a5d6a7;
+  --green-main: #4caf50;
+  --green-dark: #2e7d32;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-mid: #4a4a6a;
+  --shadow: 0 8px 32px rgba(76, 175, 80, 0.15);
+  --glass: rgba(255, 255, 255, 0.75);
+  --radius: 20px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--white);
+  overflow: hidden;
+}
+
+/* ===== Loading Screen ===== */
+.loader-wrapper {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 50%, #e8f5e9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader-content {
+  text-align: center;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.logo-float {
+  animation: float 3s ease-in-out infinite;
+  margin-bottom: 24px;
+}
+
+.loader-logo {
+  width: 180px;
+  height: 180px;
+  border-radius: 36px;
+  object-fit: cover;
+  box-shadow: 0 16px 56px rgba(76, 175, 80, 0.35);
+  border: 3px solid rgba(76, 175, 80, 0.2);
+}
+
+.loader-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--green-dark), var(--green-main));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+  margin-bottom: 6px;
+}
+
+.loader-sub {
+  font-size: 1rem;
+  color: var(--text-mid);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.loader-credit {
+  font-size: 0.82rem;
+  color: #9e9e9e;
+  margin-bottom: 36px;
+  letter-spacing: 1px;
+}
+
+.progress-bar-wrap {
+  width: 220px;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 99px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--green-main), var(--green-dark));
+  border-radius: 99px;
+  animation: progress 5s linear forwards;
+}
+
+/* ===== Keyframes ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes progress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
