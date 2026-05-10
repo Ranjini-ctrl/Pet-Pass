@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up – PetPass</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="auth-page">
+    <!-- Background blobs -->
+    <div class="auth-blob auth-blob-1"></div>
+    <div class="auth-blob auth-blob-2"></div>
+
+    <!-- Theme toggle -->
+    <button class="btn-theme" id="themeToggle" style="position:fixed;top:16px;right:16px;z-index:100;" title="Toggle theme">🌙</button>
+
+    <div class="auth-card">
+      <!-- Logo -->
+      <div class="auth-logo">
+        <img src="logo.jpeg" alt="PetPass Logo" />
+        <h1>PetPass</h1>
+        <p>By PetOLife — Digital Identity for Pets</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tabSignup">Sign Up</button>
+        <button class="auth-tab" id="tabLogin" onclick="window.location.href='login.html'">Login</button>
+      </div>
+
+      <!-- Signup Form -->
+      <form id="signupForm" novalidate>
+        <!-- Pet Image Upload -->
+        <div class="form-group">
+          <label>Pet Photo</label>
+          <div class="img-upload-area" id="uploadArea">
+            <input type="file" id="petImage" accept="image/*" />
+            <img class="img-preview" id="imgPreview" alt="Pet preview" />
+            <div id="uploadPlaceholder">
+              <div class="img-upload-icon">🐾</div>
+              <div class="img-upload-text">Click to upload pet photo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ownerName">Owner Name</label>
+            <input type="text" id="ownerName" placeholder="Your full name" />
+            <span class="form-error" id="err-owner">Please enter owner name</span>
+          </div>
+          <div class="form-group">
+            <label for="petName">Pet Name</label>
+            <input type="text" id="petName" placeholder="Pet's name" />
+            <span class="form-error" id="err-pet">Please enter pet name</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="petType">Pet Type</label>
+            <select id="petType">
+              <option value="">Select type</option>
+              <option value="Dog">🐕 Dog</option>
+              <option value="Cat">🐈 Cat</option>
+              <option value="Bird">🦜 Bird</option>
+              <option value="Rabbit">🐇 Rabbit</option>
+              <option value="Fish">🐠 Fish</option>
+              <option value="Hamster">🐹 Hamster</option>
+              <option value="Other">🐾 Other</option>
+            </select>
+            <span class="form-error" id="err-type">Please select pet type</span>
+          </div>
+          <div class="form-group">
+            <label for="petAge">Pet Age</label>
+            <input type="text" id="petAge" placeholder="e.g. 2 years" />
+            <span class="form-error" id="err-age">Please enter pet age</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com" />
+          <span class="form-error" id="err-email">Please enter a valid email</span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-icon-wrap">
+            <input type="password" id="password" placeholder="Create a password" />
+            <button type="button" class="input-toggle" id="togglePwd">👁️</button>
+          </div>
+          <span class="form-error" id="err-pwd">Password must be at least 6 characters</span>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">
+          Create PetPass Account 🐾
+        </button>
+      </form>
+
+      <p style="text-align:center;margin-top:16px;font-size:0.82rem;color:var(--text-light);">
+        Already have an account?
+        <a href="login.html" style="color:var(--green-main);font-weight:600;text-decoration:none;">Login here</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
