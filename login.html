@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – PetPass</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-blob auth-blob-1"></div>
+    <div class="auth-blob auth-blob-2"></div>
+
+    <button class="btn-theme" id="themeToggle" style="position:fixed;top:16px;right:16px;z-index:100;" title="Toggle theme">🌙</button>
+
+    <div class="auth-card">
+      <div class="auth-logo">
+        <img src="logo.jpeg" alt="PetPass Logo" />
+        <h1>Welcome Back</h1>
+        <p>Login to access your PetPass</p>
+      </div>
+
+      <div class="auth-tabs">
+        <button class="auth-tab" onclick="window.location.href='signup.html'">Sign Up</button>
+        <button class="auth-tab active">Login</button>
+      </div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="loginOwner">Owner Name</label>
+          <input type="text" id="loginOwner" placeholder="Your full name" />
+          <span class="form-error" id="err-login-owner">Please enter your name</span>
+        </div>
+
+        <div class="form-group">
+          <label for="loginEmail">Email Address</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com" />
+          <span class="form-error" id="err-login-email">Please enter a valid email</span>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <div class="input-icon-wrap">
+            <input type="password" id="loginPassword" placeholder="Your password" />
+            <button type="button" class="input-toggle" id="toggleLoginPwd">👁️</button>
+          </div>
+          <span class="form-error" id="err-login-pwd">Please enter your password</span>
+        </div>
+
+        <div id="loginError" style="display:none;background:#ffebee;color:#c62828;padding:10px 14px;border-radius:10px;font-size:0.83rem;margin-bottom:12px;border:1px solid #ffcdd2;">
+          ❌ Invalid credentials. Please check your details.
+        </div>
+
+        <button type="submit" class="btn-submit" id="loginBtn">
+          Login to PetPass 🐾
+        </button>
+      </form>
+
+      <p style="text-align:center;margin-top:16px;font-size:0.82rem;color:var(--text-light);">
+        Don't have an account?
+        <a href="signup.html" style="color:var(--green-main);font-weight:600;text-decoration:none;">Sign up free</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
