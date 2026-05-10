@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetPass – Digital Identity for Pets</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="#home" class="nav-brand">
+      <img src="logo.jpeg" alt="PetPass" class="nav-logo" />
+      <span class="nav-brand-text">PetPass</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#digital-identity">Digital ID</a></li>
+      <li><a href="#vaccination">Vaccination</a></li>
+      <li><a href="#why-choose">Why Us</a></li>
+      <li><a href="#mission">Mission</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="btn-theme" id="themeToggle" title="Toggle theme">🌙</button>
+      <a href="signup.html" class="btn-primary">Get PetPass 🐾</a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PROFILE TRIGGER ===== -->
+  <button class="profile-trigger" id="profileTrigger" title="My Profile">👤</button>
+
+  <!-- ===== PROFILE PANEL ===== -->
+  <div class="profile-panel" id="profilePanel">
+    <div class="profile-avatar" id="profileAvatar">👤</div>
+    <div class="profile-name" id="profileName">Pet Owner</div>
+    <div class="profile-email" id="profileEmail">owner@example.com</div>
+    <div class="profile-divider"></div>
+
+    <!-- Mini PetPass Card -->
+    <div class="profile-card-mini">
+      <div class="petpass-card" id="miniCard" style="width:100%;height:auto;min-height:160px;">
+        <div class="card-top">
+          <span class="card-brand">PetPass · PetOLife</span>
+          <img src="logo.jpeg" class="card-logo-sm" alt="logo" />
+        </div>
+        <div class="card-pet-info">
+          <div class="card-pet-img" id="miniCardImg">🐾</div>
+          <div class="card-details">
+            <h2 id="miniCardPetName">Pet Name</h2>
+            <p id="miniCardPetType">Type · Age</p>
+            <p id="miniCardOwner">Owner</p>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-owner">
+            <span id="miniCardOwnerName">Owner Name</span>
+            PetPass ID
+          </div>
+          <div class="card-qr">
+            <div class="qr-grid">
+              <div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div>
+              <div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div>
+              <div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div>
+              <div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div>
+              <div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-actions">
+      <button class="profile-btn primary" id="downloadCardBtn">⬇️ Download PetPass Card</button>
+      <button class="profile-btn secondary" onclick="window.location.href='signup.html'">✏️ Edit Profile</button>
+      <button class="profile-btn secondary" id="logoutBtn">🚪 Logout</button>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">🐾 Digital Pet Identity System</div>
+        <h1 class="hero-title">
+          Because Every Pet<br />
+          Deserves an <span>Identity</span>
+        </h1>
+        <p class="hero-desc">
+          PetPass gives your beloved companion a verified digital identity — carrying their health records, vaccinations, and story wherever they go.
+        </p>
+        <div class="hero-cta">
+          <a href="signup.html" class="btn-primary">Register Pet 🐾</a>
+          <a href="#features" class="btn-outline">Explore PetPass</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">10K+</div>
+            <div class="stat-label">Pets Registered</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">99%</div>
+            <div class="stat-label">Uptime</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">Free</div>
+            <div class="stat-label">Forever</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card-preview">
+          <!-- Full PetPass Card Preview -->
+          <div class="petpass-card" id="heroCard" style="width:320px;height:179px;">
+            <div class="card-top">
+              <span class="card-brand">PetPass · PetOLife</span>
+              <img src="logo.jpeg" class="card-logo-sm" alt="logo" />
+            </div>
+            <div class="card-pet-info">
+              <div class="card-pet-img" id="heroCardImg">🐾</div>
+              <div class="card-details">
+                <h2 id="heroCardPetName">Your Pet</h2>
+                <p id="heroCardPetType">Type · Age</p>
+                <p id="heroCardOwnerLabel">Owner</p>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <div class="card-owner">
+                <span id="heroCardOwnerName">Register Now</span>
+                PetPass ID
+              </div>
+              <div class="card-qr">
+                <div class="qr-grid">
+                  <div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div>
+                  <div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div>
+                  <div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div>
+                  <div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div>
+                  <div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="text-center fade-in">
+        <span class="section-tag">About PetPass</span>
+        <h2 class="section-title">A Digital Identity for Your <span>Furry Family</span></h2>
+        <p class="section-desc">Just like humans carry IDs, your pet deserves one too. PetPass creates a secure, shareable digital identity that travels with your pet everywhere.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-img-card fade-in">
+          <div style="font-size:5rem;margin-bottom:12px;">🐾</div>
+          <p style="font-size:1rem;font-weight:600;color:var(--green-dark);">Every pet has a story worth keeping</p>
+        </div>
+        <div class="fade-in fade-in-delay-2">
+          <p style="color:var(--text-mid);line-height:1.8;margin-bottom:24px;">
+            PetPass is a modern digital identity platform built for pet owners who care deeply about their companions. We believe every pet deserves a verified, accessible record of their life — from their first vet visit to their latest vaccination.
+          </p>
+          <div class="about-points">
+            <div class="about-point">
+              <div class="about-point-icon">🔒</div>
+              <div class="about-point-text">
+                <h4>Secure & Private</h4>
+                <p>Your pet's data is encrypted and only accessible to you and trusted vets.</p>
+              </div>
+            </div>
+            <div class="about-point">
+              <div class="about-point-icon">📱</div>
+              <div class="about-point-text">
+                <h4>Always Accessible</h4>
+                <p>Access your pet's full profile from any device, anywhere in the world.</p>
+              </div>
+            </div>
+            <div class="about-point">
+              <div class="about-point-icon">❤️</div>
+              <div class="about-point-text">
+                <h4>Built with Love</h4>
+                <p>Designed by pet lovers, for pet lovers. Every feature is crafted with care.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section id="features">
+    <div class="section-inner">
+      <div class="text-center fade-in">
+        <span class="section-tag">Features</span>
+        <h2 class="section-title">Everything Your Pet <span>Needs</span></h2>
+        <p class="section-desc">A complete digital toolkit for modern pet ownership — all in one beautiful card.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-in fade-in-delay-1">
+          <div class="feature-icon">🪪</div>
+          <h3>Pet Identification</h3>
+          <p>A verified digital ID with your pet's photo, name, breed, and unique PetPass number for instant identification.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-2">
+          <div class="feature-icon">💉</div>
+          <h3>Vaccination Tracking</h3>
+          <p>Keep all vaccination records organized with due-date reminders so you never miss an important shot.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-3">
+          <div class="feature-icon">🏥</div>
+          <h3>Medical Records</h3>
+          <p>Store vet visits, prescriptions, allergies, and medical history in one secure, shareable place.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-4">
+          <div class="feature-icon">🚨</div>
+          <h3>Emergency Access</h3>
+          <p>First responders and vets can instantly access critical health info via QR code in emergencies.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-5">
+          <div class="feature-icon">📲</div>
+          <h3>QR Verification</h3>
+          <p>Each PetPass includes a unique QR code that links to your pet's verified digital profile instantly.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-1">
+          <div class="feature-icon">☁️</div>
+          <h3>Secure Cloud Storage</h3>
+          <p>All data is safely backed up in the cloud — never lose your pet's records even if you change devices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section id="how-it-works">
+    <div class="section-inner">
+      <div class="text-center fade-in">
+        <span class="section-tag">How It Works</span>
+        <h2 class="section-title">Three Simple <span>Steps</span></h2>
+        <p class="section-desc">Getting your pet's digital identity takes less than 2 minutes.</p>
+      </div>
+      <div class="steps-timeline">
+        <div class="step-item fade-in fade-in-delay-1">
+          <div class="step-num">🐾</div>
+          <h3>1. Register Pet</h3>
+          <p>Fill in your pet's details — name, type, age, and a cute photo. Takes under 2 minutes.</p>
+        </div>
+        <div class="step-item fade-in fade-in-delay-2">
+          <div class="step-num">✨</div>
+          <h3>2. Generate PetPass</h3>
+          <p>Your pet's digital identity card is instantly created with a unique QR code and ID number.</p>
+        </div>
+        <div class="step-item fade-in fade-in-delay-3">
+          <div class="step-num">🌍</div>
+          <h3>3. Access Anywhere</h3>
+          <p>Download, share, or show your PetPass from any device — at the vet, park, or border crossing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIGITAL IDENTITY ===== -->
+  <section id="digital-identity">
+    <div class="section-inner">
+      <div class="identity-grid">
+        <div class="fade-in">
+          <span class="section-tag">Digital Pet Identity</span>
+          <h2 class="section-title">Pets Deserve IDs <span>Too</span></h2>
+          <p class="section-desc">
+            Humans carry passports, driver's licenses, and health cards. Why should our pets be any different? A digital identity gives your pet a voice when they can't speak for themselves.
+          </p>
+          <ul class="identity-list">
+            <li>Instant identification at vet clinics</li>
+            <li>Proof of ownership in disputes</li>
+            <li>Emergency medical access via QR</li>
+            <li>Travel documentation support</li>
+            <li>Lost pet recovery assistance</li>
+            <li>Vaccination proof for boarding</li>
+          </ul>
+        </div>
+        <div class="fade-in fade-in-delay-2" style="display:flex;justify-content:center;align-items:center;">
+          <div style="text-align:center;">
+            <div style="font-size:6rem;animation:float 4s ease-in-out infinite;display:block;margin-bottom:20px;">🐕</div>
+            <div class="petpass-card" style="width:280px;height:157px;margin:0 auto;">
+              <div class="card-top">
+                <span class="card-brand">PetPass · PetOLife</span>
+                <img src="logo.jpeg" class="card-logo-sm" alt="logo" />
+              </div>
+              <div class="card-pet-info">
+                <div class="card-pet-img">🐕</div>
+                <div class="card-details">
+                  <h2>Buddy</h2>
+                  <p>Dog · 3 Years</p>
+                  <p>Owner: Alex</p>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-owner"><span>Alex Johnson</span>PetPass ID</div>
+                <div class="card-qr">
+                  <div class="qr-grid">
+                    <div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div>
+                    <div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div>
+                    <div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div>
+                    <div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div>
+                    <div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div><div class="qr-cell w"></div><div class="qr-cell"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VACCINATION ===== -->
+  <section id="vaccination">
+    <div class="section-inner">
+      <div class="text-center fade-in">
+        <span class="section-tag">Vaccination Records</span>
+        <h2 class="section-title">Never Miss a <span>Shot</span></h2>
+        <p class="section-desc">Track every vaccination with smart reminders and a beautiful timeline view.</p>
+      </div>
+      <div class="vacc-tracker fade-in fade-in-delay-1">
+        <div class="vacc-header">
+          <h3>🐾 Buddy's Vaccination Record</h3>
+          <span class="vacc-badge">4 of 5 Complete</span>
+        </div>
+        <div class="vacc-list">
+          <div class="vacc-item">
+            <div class="vacc-dot done"></div>
+            <div class="vacc-info">
+              <h4>Rabies Vaccine</h4>
+              <p>Administered: Jan 15, 2024</p>
+            </div>
+            <span class="vacc-status done">✓ Done</span>
+          </div>
+          <div class="vacc-item">
+            <div class="vacc-dot done"></div>
+            <div class="vacc-info">
+              <h4>Distemper (DHPP)</h4>
+              <p>Administered: Mar 02, 2024</p>
+            </div>
+            <span class="vacc-status done">✓ Done</span>
+          </div>
+          <div class="vacc-item">
+            <div class="vacc-dot done"></div>
+            <div class="vacc-info">
+              <h4>Bordetella</h4>
+              <p>Administered: May 10, 2024</p>
+            </div>
+            <span class="vacc-status done">✓ Done</span>
+          </div>
+          <div class="vacc-item">
+            <div class="vacc-dot due"></div>
+            <div class="vacc-info">
+              <h4>Leptospirosis</h4>
+              <p>Due: Jun 20, 2025</p>
+            </div>
+            <span class="vacc-status due">⚠ Due Soon</span>
+          </div>
+          <div class="vacc-item">
+            <div class="vacc-dot upcoming"></div>
+            <div class="vacc-info">
+              <h4>Lyme Disease</h4>
+              <p>Scheduled: Sep 01, 2025</p>
+            </div>
+            <span class="vacc-status upcoming">📅 Upcoming</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE ===== -->
+  <section id="why-choose">
+    <div class="section-inner">
+      <div class="text-center fade-in">
+        <span class="section-tag">Why Choose PetPass</span>
+        <h2 class="section-title">The Smart Choice for <span>Pet Parents</span></h2>
+        <p class="section-desc">Thousands of pet owners trust PetPass to keep their companions safe and identified.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card fade-in fade-in-delay-1">
+          <span class="why-icon">⚡</span>
+          <h3>Instant Setup</h3>
+          <p>Create your pet's digital ID in under 2 minutes — no paperwork, no waiting.</p>
+        </div>
+        <div class="why-card fade-in fade-in-delay-2">
+          <span class="why-icon">🔐</span>
+          <h3>Bank-Level Security</h3>
+          <p>Your pet's data is encrypted and protected with the highest security standards.</p>
+        </div>
+        <div class="why-card fade-in fade-in-delay-3">
+          <span class="why-icon">📱</span>
+          <h3>Works Everywhere</h3>
+          <p>Access PetPass on any device — phone, tablet, or laptop — anytime, anywhere.</p>
+        </div>
+        <div class="why-card fade-in fade-in-delay-4">
+          <span class="why-icon">💚</span>
+          <h3>Completely Free</h3>
+          <p>Core features are free forever. No hidden fees, no subscriptions required.</p>
+        </div>
+        <div class="why-card fade-in fade-in-delay-5">
+          <span class="why-icon">🏥</span>
+          <h3>Vet Approved</h3>
+          <p>Designed in collaboration with veterinary professionals for accuracy and trust.</p>
+        </div>
+        <div class="why-card fade-in fade-in-delay-1">
+          <span class="why-icon">🌍</span>
+          <h3>Global Recognition</h3>
+          <p>PetPass is recognized by pet care facilities and vets across the country.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MISSION ===== -->
+  <section id="mission">
+    <div class="section-inner">
+      <span class="section-tag">Our Mission</span>
+      <h2 class="section-title">We Believe Every Pet <span>Matters</span></h2>
+      <p class="section-desc">
+        At PetOLife, we're on a mission to bridge the gap between pet care and modern technology — making it easier for owners to protect, identify, and advocate for their beloved companions.
+      </p>
+      <div class="mission-quote">
+        A pet is not just an animal. They are family, friends, and healers. They deserve the same care, dignity, and recognition that we give to every member of our family.
+      </div>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="signup.html" class="btn-primary" style="background:white;color:var(--green-dark);">Start for Free 🐾</a>
+        <a href="#about" class="btn-outline" style="border-color:rgba(255,255,255,0.5);color:white;">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.jpeg" alt="PetPass" />
+        <h3>PetPass</h3>
+        <p>A digital identity system for pets by PetOLife. Keeping your companions safe, identified, and loved.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">🐦</a>
+          <a href="#" class="social-link">📘</a>
+          <a href="#" class="social-link">📸</a>
+          <a href="#" class="social-link">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#mission">Mission</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Features</h4>
+        <ul>
+          <li><a href="#">Pet ID Card</a></li>
+          <li><a href="#">Vaccination Tracker</a></li>
+          <li><a href="#">Medical Records</a></li>
+          <li><a href="#">QR Verification</a></li>
+          <li><a href="#">Emergency Access</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">hello@petolife.com</a></li>
+          <li><a href="#">Support Center</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 PetPass by PetOLife. Made with ❤️ by Ranjini.</span>
+      <span>All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
